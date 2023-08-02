@@ -1,3 +1,26 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "churn_classifier"
+version = "0.0.1"
+authors = [{ name = "Simone Viozzi", email = "simoneviozzi97@gmail.com" }]
+description = "Pipeline to train and use a classifier to predict if an employee will leave the company"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pandas",
+    "jupyter",
+    "matplotlib",
+    "scikit-learn",
+    "imbalanced-learn",
+]
+
+[tool.setuptools.packages.find]
+include = ["churn_classifier", "churn_classifier.*"]
+namespaces = false
+
 [tool.black]
 line-length = 100
 include = '\.pyi?$'
