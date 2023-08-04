@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "churn_classifier"
-version = "0.0.1"
+version = "0.0.2"
 authors = [{ name = "Simone Viozzi", email = "simoneviozzi97@gmail.com" }]
 description = "Pipeline to train and use a classifier to predict if an employee will leave the company"
 readme = "README.md"
@@ -20,6 +20,9 @@ dependencies = [
 [tool.setuptools.packages.find]
 include = ["churn_classifier", "churn_classifier.*"]
 namespaces = false
+
+[tool.setuptools.package-data]
+churn_classifier = ["dataset/churn.csv"]
 
 [tool.black]
 line-length = 100
