@@ -15,6 +15,7 @@ dependencies = [
     "matplotlib",
     "scikit-learn",
     "imbalanced-learn",
+    "pydantic",
 ]
 
 [tool.setuptools.packages.find]
