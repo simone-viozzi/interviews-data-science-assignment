@@ -9,17 +9,10 @@ authors = [{ name = "Simone Viozzi", email = "simoneviozzi97@gmail.com" }]
 description = "Pipeline to train and use a classifier to predict if an employee will leave the company"
 readme = "README.md"
 requires-python = ">=3.10"
-dependencies = [
-    "pandas",
-    "jupyter",
-    "matplotlib",
-    "scikit-learn",
-    "imbalanced-learn",
-    "pydantic",
-    "fastapi",
-    "uvicorn[standard]",
-    "python-multipart",
-]
+dynamic = ["dependencies"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
 
 [project.optional-dependencies]
 dev = ["pre-commit", "black"]

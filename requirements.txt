@@ -1,0 +1,9 @@
+pandas
+jupyter
+matplotlib
+scikit-learn
+imbalanced-learn
+pydantic
+fastapi
+uvicorn[standard]
+python-multipart
