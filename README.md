@@ -163,4 +163,11 @@ Now they want to embed your model in a web application.
 ---
 
 ## How to run
-Please fill this section as part of the assignment.
+
+To run the app:
+
+```bash
+docker compose up --build
+```
+
+The API docs will be available at `http://localhost:8000/docs`.
