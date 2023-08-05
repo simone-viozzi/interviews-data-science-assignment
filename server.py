@@ -5,7 +5,7 @@ import uuid
 from pathlib import Path
 
 import pandas as pd
-from fastapi import FastAPI, UploadFile
+from fastapi import FastAPI, HTTPException, UploadFile
 
 from churn_classifier.dataset import default_dataset
 from churn_classifier.inference import ChurnClassifier, DatasetRow
@@ -61,9 +61,13 @@ async def cleanup():
     return {"message": f"Deleted {len(models)} models"}
 
 
-@app.post("/predict")
+@app.post("/models/{model_id}")
 async def predict(model_id: str, row: DatasetRow):
     model_path = models_path / model_id
+
+    if not model_path.exists():
+        raise HTTPException(status_code=404, detail="Model not found")
+
     model = ChurnClassifier(model_path=model_path)
     return model.predict(row)
 
