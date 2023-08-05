@@ -16,6 +16,9 @@ dependencies = [
     "scikit-learn",
     "imbalanced-learn",
     "pydantic",
+    "fastapi",
+    "uvicorn[standard]",
+    "python-multipart",
 ]
 
 [project.optional-dependencies]
