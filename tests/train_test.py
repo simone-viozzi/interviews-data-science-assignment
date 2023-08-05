@@ -1,12 +1,11 @@
-import pandas as pd
-from churn_classifier.utils import get_X_y
-from churn_classifier.train import train
-from churn_classifier.dataset import default_dataset
 import tempfile
 from pathlib import Path
 
+from churn_classifier.dataset import default_dataset
+from churn_classifier.train import train
+
+
 def train_test():
-    
     X = default_dataset.copy().drop(columns=["target"])
     y = default_dataset["target"]
 

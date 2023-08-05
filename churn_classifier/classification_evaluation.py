@@ -1,7 +1,5 @@
-from sklearn.metrics import (
-    classification_report,
-    ConfusionMatrixDisplay,
-)
+from sklearn.metrics import ConfusionMatrixDisplay, classification_report
+
 
 def classification_eval(*, y_pred, y_test):
     display_labels = ["Not looking", "Looking"]

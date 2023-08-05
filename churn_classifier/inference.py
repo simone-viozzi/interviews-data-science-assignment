@@ -1,13 +1,14 @@
-from typing import Any
-from joblib import load
-from sklearn.ensemble import HistGradientBoostingClassifier
-from sklearn.compose import ColumnTransformer
-
-from sklearn.pipeline import Pipeline
 from pathlib import Path
+from typing import TYPE_CHECKING
+
 import pandas as pd
+from joblib import load
 from pydantic import BaseModel
+
 from churn_classifier.data_cleaning import clean_dataset
+
+if TYPE_CHECKING:
+    from sklearn.pipeline import Pipeline
 
 
 class DatasetRow(BaseModel):
@@ -42,7 +43,6 @@ class ChurnClassifier:
             },
             index=X.index,
         )
-
 
     def predict(self, X: DatasetRow) -> float:
         X_df = pd.DataFrame([X.model_dump()])
