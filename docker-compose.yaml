@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  churn_classifier:
+    image: churn_classifier
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8000:8000
+    volumes:
+      - ./models:/app/models
+    environment:
+      - MODELS_PATH=/app/models

@@ -11,8 +11,8 @@ from churn_classifier.dataset import default_dataset
 from churn_classifier.inference import ChurnClassifier, DatasetRow
 from churn_classifier.train import train
 
-# if the env var MODEL_PATH is not set, use a temp dir
-if "MODEL_PATH" in os.environ:
+# if the env var MODELS_PATH is not set, use a temp dir
+if "MODELS_PATH" in os.environ:
     models_path = Path(os.environ["MODELS_PATH"])
 else:
     models_path = Path(tempfile.TemporaryDirectory().name)
