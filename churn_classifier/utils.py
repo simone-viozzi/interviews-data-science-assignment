@@ -1,5 +1,6 @@
 import pandas as pd
 
+
 def get_X_y(dataset: pd.DataFrame):
     data = dataset.copy()
 

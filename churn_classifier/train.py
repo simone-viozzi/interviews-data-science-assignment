@@ -1,15 +1,15 @@
+from pathlib import Path
+
 import pandas as pd
+from joblib import dump
 from sklearn.compose import ColumnTransformer
 from sklearn.ensemble import HistGradientBoostingClassifier
-from sklearn.model_selection import cross_val_predict, cross_validate
+from sklearn.model_selection import cross_validate
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import OrdinalEncoder
-from pathlib import Path
-from joblib import dump
-from churn_classifier.data_cleaning import clean_dataset
-
 
 from churn_classifier.classification_evaluation import classification_eval
+from churn_classifier.data_cleaning import clean_dataset
 
 default_categorical_columns = (
     "city",

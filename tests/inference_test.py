@@ -1,12 +1,13 @@
-import pandas as pd
-from churn_classifier.data_cleaning import clean_dataset
-from churn_classifier.utils import get_X_y
-from churn_classifier.train import train
-from churn_classifier.dataset import default_dataset
 import tempfile
 from pathlib import Path
-from churn_classifier.inference import ChurnClassifier, DatasetRow
 
+import pandas as pd
+
+from churn_classifier.data_cleaning import clean_dataset
+from churn_classifier.dataset import default_dataset
+from churn_classifier.inference import ChurnClassifier, DatasetRow
+from churn_classifier.train import train
+from churn_classifier.utils import get_X_y
 
 
 def train_model(tmpdir):
@@ -40,10 +41,11 @@ def inference_test():
         row = {k: None if pd.isna(v) else v for k, v in row.items()}
 
         # convert to a DatasetRow
-        row_dataset = DatasetRow(**row) # type: ignore
+        row_dataset = DatasetRow(**row)  # type: ignore
 
         # test the predict method
         print(model.predict(row_dataset))
+
 
 if __name__ == "__main__":
     inference_test()

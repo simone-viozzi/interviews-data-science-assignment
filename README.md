@@ -4,25 +4,25 @@
 
 If you read this file, you have passed our initial screening. Well done! :clap: :clap: :clap:
 
-:rocket: The next step to join the Data Science team of [xtream](https://xtreamers.io) is this assignment. 
+:rocket: The next step to join the Data Science team of [xtream](https://xtreamers.io) is this assignment.
 You will find several datasets: please choose **only one**.
 For each dataset, we propose several challenges. You **do not need to
-complete all of them**, but rather only the ones you feel comfortable about or the ones that interest you. 
+complete all of them**, but rather only the ones you feel comfortable about or the ones that interest you.
 
 :sparkles: Choose what really makes you shine!
 
 :watch: The deadline for submission is **10 days** after you are provided with the link to this repository, so that you can move at your own pace.
 
 :heavy_exclamation_mark: **Important**: you might feel the tasks are too broad, or the requirements are not
-fully elicited. **This is done on purpose**: we wish to let you take your own way in 
+fully elicited. **This is done on purpose**: we wish to let you take your own way in
 extracting value from the data and in developing your own solutions.
 
 ### Deliverables
 
-Please fork this repository and work on it as if you were taking on a real-world project. 
+Please fork this repository and work on it as if you were taking on a real-world project.
 On the deadline, we will check out your work.
 
-:heavy_exclamation_mark: **Important**: At the end of this README, you will find a blank "How to run" section. 
+:heavy_exclamation_mark: **Important**: At the end of this README, you will find a blank "How to run" section.
 Please write there instructions on how to run your code.
 
 ### Evaluation
@@ -68,9 +68,9 @@ Create a Jupyter notebook to meet John's request.
 
 #### Challenge 3
 
-Francesco likes your model! Now he wants to use it. To improve the model, Francesco is open to hire a new expert and 
+Francesco likes your model! Now he wants to use it. To improve the model, Francesco is open to hire a new expert and
 let him value more stones.
-**Create an automatic pipeline capable of training a new instance of your model from the raw dataset**. 
+**Create an automatic pipeline capable of training a new instance of your model from the raw dataset**.
 
 #### Challenge 4
 
@@ -125,11 +125,11 @@ Zap Inc is not impressed by the performance of your model in 2020. You should de
 **Dataset description**: [Employee churn readme](./datasets/employee-churn/README.md)
 
 You have just been contracted by Pear Inc, a multinational company worried about its poor talent retention.
-In the past few months, they collected data about their new employees. All of them come from classes 
+In the past few months, they collected data about their new employees. All of them come from classes
 the company is sponsoring, yet many enter Pear just to leave a few months later.
 This is a huge waste of time and money.
 
-The HR department of the company wants you to understand what is going on and to prevent further bleeding. 
+The HR department of the company wants you to understand what is going on and to prevent further bleeding.
 
 #### Challenge 1
 
@@ -144,20 +144,20 @@ If possible, the company wants to know the likelihood of the churn.
 
 #### Challenge 3
 
-Wow, the model works great, but why does it? 
+Wow, the model works great, but why does it?
 **Try and make the model interpretable**, by highlighting the most important features and how each prediction is made.
 
 #### Challenge 4
 
-Now, production trial. 
+Now, production trial.
 **Develop and end-to-end pipeline to train a model given a new dataset.**
-You can assume that the new dataset has exactly the same structure as the provided one: 
+You can assume that the new dataset has exactly the same structure as the provided one:
 possible structural changes will be managed by your fellow data engineers.
 
 #### Challenge 5
 
 Finally, Pear Inc is happy with your results!
-Now they want to embed your model in a web application. 
+Now they want to embed your model in a web application.
 **Develop a REST API to expose the model predictions**.
 
 ---

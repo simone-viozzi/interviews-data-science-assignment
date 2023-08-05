@@ -18,12 +18,18 @@ dependencies = [
     "pydantic",
 ]
 
+[project.optional-dependencies]
+dev = ["pre-commit", "black"]
+
 [tool.setuptools.packages.find]
 include = ["churn_classifier", "churn_classifier.*"]
 namespaces = false
 
 [tool.setuptools.package-data]
 churn_classifier = ["dataset/churn.csv"]
+
+[tool.isort]
+profile = "black"
 
 [tool.black]
 line-length = 100

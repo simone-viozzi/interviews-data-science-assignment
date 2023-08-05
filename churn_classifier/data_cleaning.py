@@ -85,6 +85,6 @@ def clean_dataset(df: pd.DataFrame):
                 "No relevent experience": False,
             },
         ).astype("bool"),
-        enrolled_university=df.enrolled_university.fillna("Unknow").astype("category"),
+        enrolled_university=df.enrolled_university.fillna("Unknown").astype("category"),
         company_type=df.company_type.fillna("Other").astype("category"),
     )
